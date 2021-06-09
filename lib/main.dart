@@ -6,10 +6,10 @@ void main() {
   runApp(MyApp());
 }
 
-const _duration = Duration(milliseconds: 400);
+const _duration = Duration(seconds: 1);
 
 double randomBorderRadius() {
-  return Random().nextDouble() * 12;
+  return Random().nextDouble() * 100;
 }
 
 Color randomColor() {
@@ -79,6 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
             borderRadius: BorderRadius.circular(borderRadius1),
           ),
           duration: _duration,
+          curve: Curves.fastOutSlowIn,
         ),
       )),
 
